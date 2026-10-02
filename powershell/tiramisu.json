@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} - {{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "background": "#6C8EE0",
+          "foreground": "#1E1E2E",
+          "template": " <#3A4A7A>win</> {{ .Icon }} ",
+          "options": {
+            "arch": "\uf303",
+            "debian": "\uf306",
+            "fedora": "\uf30a",
+            "linux": "\uf17c",
+            "macos": "\uf179",
+            "manjaro": "\uf312",
+            "opensuse": "\uf314",
+            "ubuntu": "\uf31b",
+            "windows": "\uf17a"
+          }
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b4",
+          "background": "#8AADF4",
+          "foreground": "#1E1E2E",
+          "template": " {{ .Path }} ",
+          "options": {
+            "style": "agnoster_short",
+            "max_depth": 3,
+            "folder_icon": "...",
+            "folder_separator_icon": "\\",
+            "home_icon": "~"
+          }
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b4",
+          "background": "#A5BEF7",
+          "foreground": "#1E1E2E",
+          "template": " \ue235 {{ .Venv }} ",
+          "options": {
+            "display_mode": "environment",
+            "fetch_virtual_env": true,
+            "home_enabled": false
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "trailing_diamond": "\ue0b4",
+          "background": "#C0D0FA",
+          "foreground": "#1E1E2E",
+          "template": " {{ .FormattedMs }} ",
+          "options": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "text",
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "background": "#B48EF0",
+          "foreground": "#1E1E2E",
+          "template": " ammts \u276f "
+        }
+      ]
+    }
+  ]
+}
